@@ -1,5 +1,27 @@
 # Intent-Classification-for-20-in-scope-labels
 
+## Libraries used:
+import pandas as pd
+import numpy as np
+import requests
+import urllib.request as request
+from sklearn.preprocessing import OneHotEncoder
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from keras.preprocessing.text import Tokenizer
+from nltk.stem.lancaster import LancasterStemmer
+import json 
+import random
+import re
+import string
+from nltk.stem.snowball import SnowballStemmer
+from keras.models import Sequential,load_model
+from keras.layers import Dense, LSTM, Bidirectional, Embedding, Dropout
+from keras.callbacks import ModelCheckpoint
+from keras.preprocessing.sequence import pad_sequences
+import nltk
+
+
 
 For this use case, I moved forward with GRU (Gated recurrent units) based LSTM model. 
 General Flow: The data is first read from the .json file and then randomly 20 in-scope contents are extracted from the dataset for each label: train, test and validation. These are further loaded into Pandas data frame for further cleaning pre-processing. The text data is first scanned and then stop words, punctuations and special symbols are removed. The remaining data is then vectorized/tokenized based on the tokenizer and then additional padding is provided to keep the input data of same shape. This data is supplied to the model for training and then using the same model the label probability is calculated for the test data.
