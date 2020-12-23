@@ -28,7 +28,7 @@ General Flow: The data is first read from the .json file and then randomly 20 in
 Simplification made: For just easiness I have changed/replaced the ‘_’ in the label name with the null space.
 
 ## Model Architecture:
-
+![alt text](https://github.com/s0nicboOm/Intent-Classification-for-20-in-scope-labels/blob/main/image.jpg)
 
 ## Training-related parameters:
 Dropout = 0.5 after every layer
