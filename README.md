@@ -28,17 +28,17 @@ General Flow: The data is first read from the .json file and then randomly 20 in
 Simplification made: For just easiness I have changed/replaced the ‘_’ in the label name with the null space.
 
 ## Model Architecture:
-Layer (type)           |      Output Shape   |           Param #   
+Layer (type)                 Output Shape              Param #   
 =================================================================
-embedding_1 (Embedding) |     (None, 15, 64)|            108928    
+embedding_1 (Embedding)      (None, 15, 64)            108928    
 _________________________________________________________________
-bidirectional_1 (Bidirection| (None, 512)  |             657408    
+bidirectional_1 (Bidirection (None, 512)               657408    
 _________________________________________________________________
-dense_1 (Dense)              |(None, 32)  |              16416     
+dense_1 (Dense)              (None, 32)                16416     
 _________________________________________________________________
-dropout_1 (Dropout)          |(None, 32) |               0         
+dropout_1 (Dropout)          (None, 32)                0         
 _________________________________________________________________
-dense_2 (Dense)              |(None, 20)|                660       
+dense_2 (Dense)              (None, 20)                660       
 =================================================================
 
 ## Training-related parameters:
