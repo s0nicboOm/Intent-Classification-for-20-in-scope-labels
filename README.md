@@ -39,7 +39,7 @@ Epochs=150
 
 ## The performance evaluation metric:
 Evaluation metric = accuracy
-Final algorithm’s training accuracy = 96.69
+Final algorithm’s training accuracy = 95.65
 Final algorithm’s validation accuracy = 82.5
 
 ## Challenges:
