@@ -1,25 +1,25 @@
 # Intent-Classification-for-20-in-scope-labels
 
 ## Libraries used:
-import pandas as pd
-import numpy as np
-import requests
-import urllib.request as request
-from sklearn.preprocessing import OneHotEncoder
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from keras.preprocessing.text import Tokenizer
-from nltk.stem.lancaster import LancasterStemmer
-import json 
-import random
-import re
-import string
-from nltk.stem.snowball import SnowballStemmer
-from keras.models import Sequential,load_model
-from keras.layers import Dense, LSTM, Bidirectional, Embedding, Dropout
-from keras.callbacks import ModelCheckpoint
-from keras.preprocessing.sequence import pad_sequences
-import nltk
+import pandas as pd<br>
+import numpy as np<br>
+import requests<br>
+import urllib.request as request<br>
+from sklearn.preprocessing import OneHotEncoder<br>
+from nltk.corpus import stopwords<br>
+from nltk.tokenize import word_tokenize<br>
+from keras.preprocessing.text import Tokenizer<br>
+from nltk.stem.lancaster import LancasterStemmer<br>
+import json <br>
+import random<br>
+import re<br>
+import string<br>
+from nltk.stem.snowball import SnowballStemmer<br>
+from keras.models import Sequential,load_model<br>
+from keras.layers import Dense, LSTM, Bidirectional, Embedding, Dropout<br>
+from keras.callbacks import ModelCheckpoint<br>
+from keras.preprocessing.sequence import pad_sequences<br>
+import nltk<br>
 
 
 
@@ -28,17 +28,17 @@ General Flow: The data is first read from the .json file and then randomly 20 in
 Simplification made: For just easiness I have changed/replaced the ‘_’ in the label name with the null space.
 
 ## Model Architecture:
-Layer (type)                 Output Shape              Param #   
+Layer (type)           |      Output Shape   |           Param #   
 =================================================================
-embedding_1 (Embedding)      (None, 15, 64)            108928    
+embedding_1 (Embedding) |     (None, 15, 64)|            108928    
 _________________________________________________________________
-bidirectional_1 (Bidirection (None, 512)               657408    
+bidirectional_1 (Bidirection| (None, 512)  |             657408    
 _________________________________________________________________
-dense_1 (Dense)              (None, 32)                16416     
+dense_1 (Dense)              |(None, 32)  |              16416     
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 32)                0         
+dropout_1 (Dropout)          |(None, 32) |               0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 20)                660       
+dense_2 (Dense)              |(None, 20)|                660       
 =================================================================
 
 ## Training-related parameters:
