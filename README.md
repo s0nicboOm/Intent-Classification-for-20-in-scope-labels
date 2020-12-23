@@ -40,7 +40,7 @@ Epochs=150
 ## The performance evaluation metric:
 Evaluation metric = accuracy
 Final algorithm’s training accuracy = 95.65
-Final algorithm’s validation accuracy = 82.5
+Final algorithm’s validation accuracy = 80.6
 
 ## Challenges:
 The biggest challenge was to identify 20 labels having least similarity. This would has helped us in modelling better ML model. I tried to implement cosine similarity for the dataset and based on the resultant matrix, I was planning to select last 20 labels as they would be having least similarity. The biggest challenge and future work would have been to implement this matrix. I was not able to do this because this was taking a lot of resources – memory and CPU utilization. I also tried to make use of google collab but then for extra memory it was asking for premium version.
